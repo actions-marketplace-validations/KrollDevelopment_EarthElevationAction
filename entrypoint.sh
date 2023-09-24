@@ -3,4 +3,4 @@
 # Exit immediately on error
 set -e
 
-python getElevations.py "$INPUT_COORDINATESJSON"
+python /usr/src/app/getElevations.py "$INPUT_COORDINATESJSON"
