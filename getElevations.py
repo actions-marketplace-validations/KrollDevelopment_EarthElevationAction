@@ -36,4 +36,4 @@ if __name__ == "__main__":
             print(f"The elevation at latitude {lat} and longitude {lng} is {elevation} meters.")
 
     # Set the output variable
-    print(f"::set-output name=elevationsJSON::{json.dumps(output)}")
+    print(f"\"elevationsJSON={json.dumps(output)}\" >> $GITHUB_OUTPUT")
