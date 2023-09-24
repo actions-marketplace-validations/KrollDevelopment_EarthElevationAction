@@ -1,0 +1,12 @@
+name: 'Earth Elevation Action'
+description: 'Returns elevations for a given set of latitude and longitude pairs'
+inputs:
+  coordinatesJSON:
+    description: 'A set of latitude, longitude pairs in JSON format'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'map-pin'
+  color: 'blue'
