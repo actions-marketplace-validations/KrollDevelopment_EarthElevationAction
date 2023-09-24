@@ -1,8 +1,6 @@
 name: Test Earth Elevation Action
 on: workflow_dispatch
 
-runs-on: ubuntu-latest
-
 jobs:
   testA:
     runs-on: ubuntu-latest
