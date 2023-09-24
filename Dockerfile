@@ -12,4 +12,4 @@ RUN ls -l  # For debugging
 RUN chmod +x entrypoint.sh
 RUN ls -l  # For debugging
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
