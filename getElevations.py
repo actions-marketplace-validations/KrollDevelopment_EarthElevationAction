@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 import requests
 
 def get_elevation(lat, lng):
@@ -36,4 +37,8 @@ if __name__ == "__main__":
             print(f"The elevation at latitude {lat} and longitude {lng} is {elevation} meters.")
 
     # Set the output variable
-    print(f"elevationsJSON=\'{json.dumps(output)}\' >> $GITHUB_OUTPUT")
+    github_output_path = os.environ.get("GITHUB_OUTPUT", "")
+
+    if github_output_path:
+        with open(github_output_path, "a") as f:
+            f.write(f"elevationsJSON={json.dumps(output)}\n")
