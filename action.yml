@@ -4,6 +4,9 @@ inputs:
   coordinatesJSON:
     description: 'A set of latitude, longitude pairs in JSON format'
     required: true
+outputs:
+  elevationsJSON:
+    description: 'The original latitude, longitude pairs with elevation values in JSON format'
 runs:
   using: 'docker'
   image: 'Dockerfile'

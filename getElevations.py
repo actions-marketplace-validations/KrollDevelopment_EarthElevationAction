@@ -23,6 +23,8 @@ if __name__ == "__main__":
     coordinates_string = args.coordinatesJSON
     coordinates = json.loads(coordinates_string)
 
+    output = []
+
     for coord in coordinates:
         lat = coord.get('latitude')
         lng = coord.get('longitude')
@@ -30,4 +32,8 @@ if __name__ == "__main__":
         elevation = get_elevation(lat, lng)
 
         if elevation is not None:
+            output.append({'latitude':lat, 'longitude':lng, 'elevation': elevation})
             print(f"The elevation at latitude {lat} and longitude {lng} is {elevation} meters.")
+
+    # Set the output variable
+    print(f"::set-output name=elevationsJSON::{json.dumps(output)}")
