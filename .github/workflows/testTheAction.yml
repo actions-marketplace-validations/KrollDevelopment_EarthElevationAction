@@ -1,3 +1,13 @@
-uses: krolldevelopment/EarthElevationAction
-  with:
-    coordinatesJSON: '[{"latitude": 40.748817, "longitude": -73.985428}, {"latitude": 35.748817, "longitude": -78.985428}, {"latitude": 37.774929, "longitude": -122.419416}]'
+name: Test Earth Elevation Action
+on: workflow_dispatch
+
+runs-on: ubuntu-latest
+
+jobs:
+  testA:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the Action
+        uses: krolldevelopment/EarthElevationAction
+          with:
+            coordinatesJSON: '[{"latitude": 40.748817, "longitude": -73.985428}, {"latitude": 35.748817, "longitude": -78.985428}, {"latitude": 37.774929, "longitude": -122.419416}]'
